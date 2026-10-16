@@ -103,7 +103,13 @@ spec:
           volumeMounts:
             - name: llama-data
               mountPath: /data
+            - name: ogx-runyaml
+              mountPath: /app-root/run.yaml
+              subPath: run.yaml
       volumes:
+        - name: ogx-runyaml
+          configMap:
+            name: lucas-oct16-1-ogx-runyaml
         - name: llama-data
           # Ephemeral storage for faiss indexes and sqlite stores
           # Data is lost on pod restart
