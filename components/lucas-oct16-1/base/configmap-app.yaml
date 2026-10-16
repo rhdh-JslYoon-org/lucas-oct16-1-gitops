@@ -11,13 +11,13 @@ metadata:
     app.kubernetes.io/name: lucas-oct16-1-app-config
 data:
   # Inference model configuration
-  INFERENCE_MODEL: "openai/gemini-3.1-pro-preview"
+  INFERENCE_MODEL: "openai/gpt-4.1-mini"
   
   # Guardrail model for content safety
-  GUARDRAIL_MODEL: "ollama/llama-guard3:8b"
+  GUARDRAIL_MODEL: "openai/gpt-4.1-mini"
   
   # Model for MCP tool calls
-  MCP_TOOL_MODEL: "vllm/redhataillama-31-8b-instruct"
+  MCP_TOOL_MODEL: "openai/gpt-4.1-mini"
   
   # GitHub repository URL for issue creation
   GITHUB_URL: "https://github.com/redhat-ai-dev/ai-rhdh-installer"
